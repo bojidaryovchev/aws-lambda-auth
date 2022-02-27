@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jsonwebtoken": "8.5.1",
+    "uuid": "8.3.2"
+  }
+}

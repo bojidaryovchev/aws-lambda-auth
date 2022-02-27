@@ -15,7 +15,17 @@
       "function": {
         "auth": {
           "deploymentBucketName": "amplify-awslambdaauth-dev-144043-deployment",
-          "s3Key": "amplify-builds/auth-597a3675613352766436-build.zip"
+          "s3Key": "amplify-builds/auth-3356514d476248394672-build.zip"
+        },
+        "jwt": {
+          "deploymentBucketName": "amplify-awslambdaauth-dev-144043-deployment",
+          "s3Key": "amplify-builds/jwt-38654863456b4c6a4d4c-build.zip",
+          "jwtAccessTokenSecret": "rvUwr7NwpVq0JTh9+zj8s3k+UhFj6CsnNtc7lmiYqkNNWt1MMNYzLrgbVh1XCDcziwGKlzo7ZvcVXPK5ZKZ68s3oL5UWwo4Qrxu5woZfrsovQI/4t70Xr6x5eDHVpjP4uIgzTVfdtb0ZuCVJ5WD7XlxLLqxyVUBgFX7ZuCxCdEQFfw7FWxK33jHByu+tQYLkXl6OxYA/8blc4Pp/CJBNo0ErsWsqa3wp78e07ESWvlol26reaqNReYolMudTbi0D8PJy8kVsHZjFNgkYbyPXB0M7sA28lTrffCwMS4gESKcwSmN+2OFASRE2hn7YdAKPxzhZFyLtrCsQlNCbAV8ULQ==",
+          "jwtRefreshTokenSecret": "cezJcCdPCE+HpiOCXypMTkihmuy7qNXZrBLSvPX5rMo8HC78FNYa8Ju2efr9XtiUuP5aeTazGWpjBDV9p9ekrAk9hNAhgjtwrrlmB5mtLOEm6/v+3sLXf1qmhs+GBeYOnI71ay3mIgO4JP1jGS994aSQw9dUd/ayTWrZr75JObe5wiXwbQjMHgUMVXDzgThY7VHXHDrJSHOFxGMiOmP6eIMhAm/c8d8n54FtvzCMerebQtxZSmYPUpM160dcHddsY9kAm+NQrJdExoyCmnXXnpJ++VWJKA6uWJofoZQezlz0CTDKAegNRUZhIfEYsT/p2bdnc6gmhvwU9ikgimiWFA=="
+        },
+        "awslambdaauthcommon": {
+          "deploymentBucketName": "amplify-awslambdaauth-dev-144043-deployment",
+          "s3Key": "amplify-builds/awslambdaauthcommon-LambdaLayerVersiond34e4cc5-build.zip"
         }
       }
     }
