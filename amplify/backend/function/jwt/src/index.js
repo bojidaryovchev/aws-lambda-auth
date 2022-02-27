@@ -30,27 +30,25 @@ function encryptUserId(userId, salt) {
   return crypto.createHmac('sha256', salt).update(userId).digest('hex');
 }
 
-function generateClaims(userId, salt, expiresInSeconds) {
-  const now = new Date().getTime();
-
+function generateClaims(userId, salt) {
+  // add more JWT claims here..
   return {
     sub: encryptUserId(userId, salt),
-    iat: now,
-    exp: now + expiresInSeconds * 1000,
   };
 }
 
 exports.handler = async (event) => {
   const { userId } = JSON.parse(event.body);
 
-  const accessTokenSalt = generateSalt();
-  const accessTokenClaims = generateClaims(userId, accessTokenSalt, ACCESS_TOKEN_EXPIRES_IN_SECONDS);
+  // the accessToken is not preserved anywhere, use the accessToken salt to encrypt the userId
+  const accessTokenClaims = generateClaims(userId, process.env.JWT_ACCESS_TOKEN_SALT);
   const accessToken = jsonwebtoken.sign(accessTokenClaims, process.env.JWT_ACCESS_TOKEN_SECRET, {
     expiresIn: ACCESS_TOKEN_EXPIRES_IN_SECONDS,
   });
 
+  // the refresh token gets preserved in the database, generate new salt each time
   const refreshTokenSalt = generateSalt();
-  const refreshTokenClaims = generateClaims(userId, refreshTokenSalt, REFRESH_TOKEN_EXPIRES_IN_SECONDS);
+  const refreshTokenClaims = generateClaims(userId, refreshTokenSalt);
   const refreshToken = jsonwebtoken.sign(refreshTokenClaims, process.env.JWT_REFRESH_TOKEN_SECRET, {
     expiresIn: REFRESH_TOKEN_EXPIRES_IN_SECONDS,
   });
@@ -61,9 +59,9 @@ exports.handler = async (event) => {
     //   'Access-Control-Allow-Origin': '*',
     //   'Access-Control-Allow-Headers': '*',
     // },
-    body: JSON.stringify({
+    body: {
       accessToken,
       refreshToken,
-    }),
+    },
   });
 };

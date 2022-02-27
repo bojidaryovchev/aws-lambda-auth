@@ -16,6 +16,10 @@
     {
       "cloudFormationParameterName": "jwtRefreshTokenSecret",
       "environmentVariableName": "JWT_REFRESH_TOKEN_SECRET"
+    },
+    {
+      "cloudFormationParameterName": "jwtAccessTokenSalt",
+      "environmentVariableName": "JWT_ACCESS_TOKEN_SALT"
     }
   ]
 }

@@ -25,6 +25,9 @@
     },
     "jwtRefreshTokenSecret": {
       "Type": "String"
+    },
+    "jwtAccessTokenSalt": {
+      "Type": "String"
     }
   },
   "Conditions": {
@@ -85,6 +88,9 @@
             },
             "JWT_REFRESH_TOKEN_SECRET": {
               "Ref": "jwtRefreshTokenSecret"
+            },
+            "JWT_ACCESS_TOKEN_SALT": {
+              "Ref": "jwtAccessTokenSalt"
             }
           }
         },
