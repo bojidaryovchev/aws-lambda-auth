@@ -10,6 +10,14 @@
       "StackName": "amplify-awslambdaauth-dev-144043",
       "StackId": "arn:aws:cloudformation:us-east-1:560875410618:stack/amplify-awslambdaauth-dev-144043/7cd080f0-97ca-11ec-9ea4-0ef06ce9fb1d",
       "AmplifyAppId": "d1zcgoufqy5ju5"
+    },
+    "categories": {
+      "function": {
+        "auth": {
+          "deploymentBucketName": "amplify-awslambdaauth-dev-144043-deployment",
+          "s3Key": "amplify-builds/auth-597a3675613352766436-build.zip"
+        }
+      }
     }
   }
 }

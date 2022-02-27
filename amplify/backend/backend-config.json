@@ -1,1 +1,10 @@
-{}
+{
+  "function": {
+    "auth": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": []
+    }
+  }
+}
