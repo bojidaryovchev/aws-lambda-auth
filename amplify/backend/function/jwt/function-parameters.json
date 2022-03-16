@@ -1,13 +1,5 @@
 {
-  "lambdaLayers": [
-    {
-      "type": "ProjectLayer",
-      "resourceName": "awslambdaauthcommon",
-      "env": "dev",
-      "version": "Always choose latest version",
-      "isLatestVersionSelected": true
-    }
-  ],
+  "lambdaLayers": [],
   "environmentVariableList": [
     {
       "cloudFormationParameterName": "jwtAccessTokenSecret",

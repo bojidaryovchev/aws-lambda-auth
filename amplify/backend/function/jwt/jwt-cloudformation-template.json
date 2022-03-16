@@ -16,10 +16,6 @@
     "s3Key": {
       "Type": "String"
     },
-    "functionawslambdaauthcommonArn": {
-      "Type": "String",
-      "Default": "functionawslambdaauthcommonArn"
-    },
     "jwtAccessTokenSecret": {
       "Type": "String"
     },
@@ -101,11 +97,7 @@
           ]
         },
         "Runtime": "nodejs14.x",
-        "Layers": [
-          {
-            "Ref": "functionawslambdaauthcommonArn"
-          }
-        ],
+        "Layers": [],
         "Timeout": 25
       }
     },
@@ -115,12 +107,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "awslambdaauthLambdaRoleb05bb4d8",
+            "authLambdaRole68c680e3",
             {
               "Fn::Join": [
                 "",
                 [
-                  "awslambdaauthLambdaRoleb05bb4d8",
+                  "authLambdaRole68c680e3",
                   "-",
                   {
                     "Ref": "env"
