@@ -3,12 +3,30 @@
     "auth": {
       "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Lambda"
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "authcommon",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ]
     },
     "jwt": {
       "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Lambda"
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "authcommon",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ]
     },
     "authcommon": {
       "providerPlugin": "awscloudformation",

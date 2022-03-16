@@ -14,11 +14,11 @@
     "categories": {
       "function": {
         "jwt": {
+          "deploymentBucketName": "amplify-auth-dev-05226-deployment",
+          "s3Key": "amplify-builds/jwt-6661534d59366d74494e-build.zip",
           "jwtAccessTokenSecret": "rvUwr7NwpVq0JTh9+zj8s3k+UhFj6CsnNtc7lmiYqkNNWt1MMNYzLrgbVh1XCDcziwGKlzo7ZvcVXPK5ZKZ68s3oL5UWwo4Qrxu5woZfrsovQI/4t70Xr6x5eDHVpjP4uIgzTVfdtb0ZuCVJ5WD7XlxLLqxyVUBgFX7ZuCxCdEQFfw7FWxK33jHByu+tQYLkXl6OxYA/8blc4Pp/CJBNo0ErsWsqa3wp78e07ESWvlol26reaqNReYolMudTbi0D8PJy8kVsHZjFNgkYbyPXB0M7sA28lTrffCwMS4gESKcwSmN+2OFASRE2hn7YdAKPxzhZFyLtrCsQlNCbAV8ULQ==",
           "jwtRefreshTokenSecret": "cezJcCdPCE+HpiOCXypMTkihmuy7qNXZrBLSvPX5rMo8HC78FNYa8Ju2efr9XtiUuP5aeTazGWpjBDV9p9ekrAk9hNAhgjtwrrlmB5mtLOEm6/v+3sLXf1qmhs+GBeYOnI71ay3mIgO4JP1jGS994aSQw9dUd/ayTWrZr75JObe5wiXwbQjMHgUMVXDzgThY7VHXHDrJSHOFxGMiOmP6eIMhAm/c8d8n54FtvzCMerebQtxZSmYPUpM160dcHddsY9kAm+NQrJdExoyCmnXXnpJ++VWJKA6uWJofoZQezlz0CTDKAegNRUZhIfEYsT/p2bdnc6gmhvwU9ikgimiWFA==",
-          "jwtAccessTokenSalt": "MjVR8g61+wXzCg1BWgVCmeSN1IqBSr7EW0g+rCdMMBF6ot4CA5ttUSc1g5v8ZEJFkWsj+GfxXFWPrEQXD/QBqGXNx9f5Y9rUx5qR6kp2er52btxxZyzpzQ0t/7MRHCPlMAEkIJ2kxw6xd7zdXIs4kV4BjQgKMVtyPyYXaIHd9+W+eKwUH6MflOYPVVrCFlpoavQoX7TkvI/B1HiAgCo64L22s7AJ0kMGAAfpIKa0XNXk3xv5Duaq/J2CVX6+FpUwyK+BxHoMJcJ4qE3Pgs4al28wnDJ5/jSmJUSqa2Q5APRe+30XzzMiRfntVGPqrTv90Oi0/FL+7IGr6YHaQ0UXeA==",
-          "deploymentBucketName": "amplify-auth-dev-05226-deployment",
-          "s3Key": "amplify-builds/jwt-6661534d59366d74494e-build.zip"
+          "jwtAccessTokenSalt": "MjVR8g61+wXzCg1BWgVCmeSN1IqBSr7EW0g+rCdMMBF6ot4CA5ttUSc1g5v8ZEJFkWsj+GfxXFWPrEQXD/QBqGXNx9f5Y9rUx5qR6kp2er52btxxZyzpzQ0t/7MRHCPlMAEkIJ2kxw6xd7zdXIs4kV4BjQgKMVtyPyYXaIHd9+W+eKwUH6MflOYPVVrCFlpoavQoX7TkvI/B1HiAgCo64L22s7AJ0kMGAAfpIKa0XNXk3xv5Duaq/J2CVX6+FpUwyK+BxHoMJcJ4qE3Pgs4al28wnDJ5/jSmJUSqa2Q5APRe+30XzzMiRfntVGPqrTv90Oi0/FL+7IGr6YHaQ0UXeA=="
         },
         "authcommon": {
           "deploymentBucketName": "amplify-auth-dev-05226-deployment",
