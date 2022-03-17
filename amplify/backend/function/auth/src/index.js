@@ -1,19 +1,13 @@
 const process = require('process');
-const AWS = require('aws-sdk');
-const uuid = require('uuid');
-
-const dynamo = new AWS.DynamoDB.DocumentClient();
+const DynamoDBClient = require('/opt/dynamoDBClient');
+const dynamoDBClient = new DynamoDBClient({
+  tableName: 'users',
+});
 
 exports.handler = async (event) => {
-  await dynamo
-    .put({
-      TableName: 'users',
-      Item: {
-        id: uuid.v4(),
-        email: 'email@provider.ext',
-      },
-    })
-    .promise();
+  await dynamoDBClient.post({
+    email: 'admin@gmail.com',
+  });
 
   // TODO implement
   const response = {

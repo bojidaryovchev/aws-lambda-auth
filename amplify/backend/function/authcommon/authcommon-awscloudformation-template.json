@@ -20,7 +20,7 @@
     }
   },
   "Resources": {
-    "LambdaLayerVersion5da7b37b": {
+    "LambdaLayerVersion471a799d": {
       "Type": "AWS::Lambda::LayerVersion",
       "Properties": {
         "CompatibleRuntimes": {
@@ -51,13 +51,105 @@
       "DeletionPolicy": "Delete",
       "UpdateReplacePolicy": "Retain"
     },
-    "LambdaLayerPermissionAwsAccounts5608754106185da7b37b": {
+    "LambdaLayerPermissionAwsAccounts560875410618471a799d": {
       "Type": "AWS::Lambda::LayerVersionPermission",
       "Properties": {
         "Action": "lambda:GetLayerVersion",
         "LayerVersionArn": {
-          "Ref": "LambdaLayerVersion5da7b37b"
+          "Ref": "LambdaLayerVersion471a799d"
         },
+        "Principal": "560875410618"
+      }
+    },
+    "LambdaLayerPermissionPrivate471a799d": {
+      "Type": "AWS::Lambda::LayerVersionPermission",
+      "Properties": {
+        "Action": "lambda:GetLayerVersion",
+        "LayerVersionArn": {
+          "Ref": "LambdaLayerVersion471a799d"
+        },
+        "Principal": {
+          "Ref": "AWS::AccountId"
+        }
+      }
+    },
+    "LambdaLayerVersiondb446d6d": {
+      "Type": "AWS::Lambda::LayerVersion",
+      "Properties": {
+        "CompatibleRuntimes": [
+          "nodejs14.x"
+        ],
+        "Content": {
+          "S3Bucket": {
+            "Ref": "deploymentBucketName"
+          },
+          "S3Key": "amplify-builds/authcommon-LambdaLayerVersiondb446d6d-build.zip"
+        },
+        "Description": "Updated layer version 2022-03-17T01:35:28.208Z",
+        "LayerName": {
+          "Fn::Sub": [
+            "authcommon-${env}",
+            {
+              "env": {
+                "Ref": "env"
+              }
+            }
+          ]
+        }
+      },
+      "DeletionPolicy": "Delete",
+      "UpdateReplacePolicy": "Retain"
+    },
+    "LambdaLayerPermissionAwsAccounts560875410618db446d6d": {
+      "Type": "AWS::Lambda::LayerVersionPermission",
+      "Properties": {
+        "Action": "lambda:GetLayerVersion",
+        "LayerVersionArn": "arn:aws:lambda:us-east-1:560875410618:layer:authcommon-dev:6",
+        "Principal": "560875410618"
+      }
+    },
+    "LambdaLayerPermissionPrivatedb446d6d": {
+      "Type": "AWS::Lambda::LayerVersionPermission",
+      "Properties": {
+        "Action": "lambda:GetLayerVersion",
+        "LayerVersionArn": "arn:aws:lambda:us-east-1:560875410618:layer:authcommon-dev:6",
+        "Principal": {
+          "Ref": "AWS::AccountId"
+        }
+      }
+    },
+    "LambdaLayerVersion5da7b37b": {
+      "Type": "AWS::Lambda::LayerVersion",
+      "Properties": {
+        "CompatibleRuntimes": [
+          "nodejs14.x"
+        ],
+        "Content": {
+          "S3Bucket": {
+            "Ref": "deploymentBucketName"
+          },
+          "S3Key": "amplify-builds/authcommon-LambdaLayerVersion5da7b37b-build.zip"
+        },
+        "Description": "Updated layer version 2022-03-17T01:35:28.208Z",
+        "LayerName": {
+          "Fn::Sub": [
+            "authcommon-${env}",
+            {
+              "env": {
+                "Ref": "env"
+              }
+            }
+          ]
+        }
+      },
+      "DeletionPolicy": "Delete",
+      "UpdateReplacePolicy": "Retain"
+    },
+    "LambdaLayerPermissionAwsAccounts5608754106185da7b37b": {
+      "Type": "AWS::Lambda::LayerVersionPermission",
+      "Properties": {
+        "Action": "lambda:GetLayerVersion",
+        "LayerVersionArn": "arn:aws:lambda:us-east-1:560875410618:layer:authcommon-dev:5",
         "Principal": "560875410618"
       }
     },
@@ -65,9 +157,7 @@
       "Type": "AWS::Lambda::LayerVersionPermission",
       "Properties": {
         "Action": "lambda:GetLayerVersion",
-        "LayerVersionArn": {
-          "Ref": "LambdaLayerVersion5da7b37b"
-        },
+        "LayerVersionArn": "arn:aws:lambda:us-east-1:560875410618:layer:authcommon-dev:5",
         "Principal": {
           "Ref": "AWS::AccountId"
         }
@@ -122,7 +212,7 @@
   "Outputs": {
     "Arn": {
       "Value": {
-        "Ref": "LambdaLayerVersion5da7b37b"
+        "Ref": "LambdaLayerVersion471a799d"
       }
     }
   }

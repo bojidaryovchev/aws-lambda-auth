@@ -22,11 +22,11 @@
         },
         "authcommon": {
           "deploymentBucketName": "amplify-auth-dev-31928-deployment",
-          "s3Key": "amplify-builds/authcommon-LambdaLayerVersion5da7b37b-build.zip"
+          "s3Key": "amplify-builds/authcommon-LambdaLayerVersion471a799d-build.zip"
         },
         "auth": {
           "deploymentBucketName": "amplify-auth-dev-31928-deployment",
-          "s3Key": "amplify-builds/auth-61755833473572385a38-build.zip"
+          "s3Key": "amplify-builds/auth-4d682b43392b56645170-build.zip"
         }
       }
     }
